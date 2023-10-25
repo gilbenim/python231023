@@ -14,3 +14,18 @@
 simpleset.py(소스코드) --> simpleset.cpython.pyc(바이트코드)
 
 라이브러리가 뭐가 있는지 알려면 커뮤니티 가입 (파이썬 코리아 등등...)
+
+10/25(수)
+Java  JDBC, ODBC
+1)connection 클래스
+2)Commmand 클래스
+3)ResultSet 클래스
+
+C#, VB
+1)Connection클래스
+2)Command클래스
+3)Dataset클래스
+
+Python
+1)Connection클래스
+2)Cursor클래스 (Command클래스 + Dataset클래스)
