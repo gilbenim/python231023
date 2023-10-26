@@ -1,0 +1,31 @@
+import requests
+from bs4 import BeautifulSoup
+
+# Define the URL to crawl
+url = "https://search.naver.com/search.naver?where=view&sm=tab_jum&query=%EB%A7%A5%EB%B6%81"
+
+# Send an HTTP request to the URL
+response = requests.get(url)
+
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    # Parse the HTML content of the page
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    # Find and extract the blog information
+    blog_entries = soup.find_all("li", class_="bx _svp_item")
+
+    for entry in blog_entries:
+        blog_name = entry.find("a", class_="sub_txt").text
+        blog_address = entry.find("a", class_="sub_txt")["href"]
+        post_title = entry.find("a", class_="api_txt_lines total_tit").text
+        post_date = entry.find("span", class_="sub_time").text
+
+        # Print the extracted information
+        print("Blog Name:", blog_name)
+        print("Blog Address:", blog_address)
+        print("Post Title:", post_title)
+        print("Post Date:", post_date)
+        print("\n")
+else:
+    print("Failed to retrieve the web page. Status code:", response.status_code)
