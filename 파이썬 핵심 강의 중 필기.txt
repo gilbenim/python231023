@@ -29,3 +29,12 @@ C#, VB
 Python
 1)Connection클래스
 2)Cursor클래스 (Command클래스 + Dataset클래스)
+
+
+10/27일
+
+무료강의 
+hunkim.github 
+구글 개발자 강의
+tensorflow.blog/book-roadmap (유투브 박해선)
+
